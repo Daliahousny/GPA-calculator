@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CalcGPA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+      body {
+        background-image: url("https://www.wallpapertip.com/wmimgs/14-144041_aesthetic-wallpaper-desktop.jpg");
+      }
+
+      .square {
+        background-color: thistle;
+        width: 400px;
+        text-align: center;
+        border-radius: 15px;
+        margin-left: 435px;
+      }
+
+      .title {
+        font-size: xx-large;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      .mytable{
+        background-color: thistle;
+        border-color: black;
+        margin-left: 350px;
+      }
+
+      .tabletitle{
+        color: aliceblue;
+        font-size: x-large;
+        font-weight: bold;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .subject{
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .button{
+        margin-left: 550px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        text-align: center;
+        font-size: large;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        background-color: thistle;
+        height: 50px;
+      }
+
+      .GPA{
+        font-size: x-large;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-align: center;
+      }
+
+      .message{
+        font-size: large;
+        font-weight: bold;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        color: gold;
+        text-align: center;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="square">
+      <div class="title">Welcome to Our Website</div>
+    </div>
+    <br>
+    <div>
+        <table class="mytable" style="width:50%;" border="2px">
+            <caption class="tabletitle">Subjects</caption>
+            <tr>
+                <th class="subject">Subject</th>
+                <th class="subject">Grade</th>
+                <th class="subject">Grade in letters</th>
+                <th class="subject">Points</th>
+                <th class="subject">Credit Hours</th>
+            </tr>
+            <tr>
+                <th class="subject">Biophysics</th>
+                <th class="subject">91/100</th>
+                <th class="subject">A+</th>
+                <th class="subject">4</th>
+                <th class="subject">3</th>
+            </tr>
+            <tr>
+                <th class="subject">Machine Learning</th>
+                <th class="subject">68/100</th>
+                <th class="subject">C</th>
+                <th class="subject">2.4</th>
+                <th class="subject">3</th>
+            </tr>
+            <tr>
+                <th class="subject">Genetic Algorithms</th>
+                <th class="subject">94/100</th>
+                <th class="subject">A+</th>
+                <th class="subject">4</th>
+                <th class="subject">3</th>
+            </tr>
+            <tr>
+                <th class="subject">Biostatistics Lab</th>
+                <th class="subject">93/100</th>
+                <th class="subject">A+</th>
+                <th class="subject">4</th>
+                <th class="subject">3</th>
+            </tr>
+            <tr>
+                <th class="subject">Biopython and Bioperl Lab</th>
+                <th class="subject">89/100</th>
+                <th class="subject">A</th>
+                <th class="subject">3.7</th>
+                <th class="subject">3</th>
+            </tr>
+            <tr>
+                <th class="subject">Field Training</th>
+                <th class="subject">88/100</th>
+                <th class="subject">A</th>
+                <th class="subject">3.7</th>
+                <th class="subject">2</th>
+            </tr>
+        </table>
+        <br>
+        <div id="myGPA" class="GPA">
+        </div>
+        <div id="message" class="message">
+        </div>
+        <div>
+            
+        </div>
+    </div>
+    <script>
+        function GPAcalculator(){
+            var hour=3;
+            var hour2=2;
+            var message="Congratulations!!!!" 
+            var gpa=((4*hour)+(2.4*hour)+(4*hour)+(4*hour)+(3.7*hour)+(3.7*hour2))/17;
+            gpa=gpa.toFixed(2);
+            document.getElementById("message").innerHTML=message;
+            document.getElementById('myGPA').innerHTML=gpa;
+        }
+    </script>
+    <br>
+    <button class="button" type="button" onclick="GPAcalculator()"><i class="fa-solid fa-calculator"></i> Calculate GPA </button>
+    
+    
+  </body>
+</html>
